@@ -15,5 +15,17 @@
             "email": "bhushanmer@gmail.com"
         }
     ],
-    "minimum-stability": "dev"
+    "autoload": {
+        "psr-4": {
+            "Yuyu\\BREAD\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yuyu\\BREAD\\Providers\\BREADServiceProvider"
+            ]
+        }
+    }
 }
