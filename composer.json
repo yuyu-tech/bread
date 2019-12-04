@@ -1,0 +1,19 @@
+{
+    "name": "yuyu/bread",
+    "description": "It's a Laravel Package to create BREAD APIs using DB configuration.",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^7.0@dev"
+    },
+    "require-dev": {
+        "php": "^7.3"
+    },
+    "license": "yuyu",
+    "authors": [
+        {
+            "name": "Bhushan Mer",
+            "email": "bhushanmer@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
