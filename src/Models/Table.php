@@ -4,8 +4,12 @@ namespace Yuyu\BREAD\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Yuyu\BREAD\Traits\CommonScope;
+
 class Table extends Model
 {
+	use CommonScope;
+	
     /**
      * The connection name for the model.
      *
