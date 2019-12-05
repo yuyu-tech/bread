@@ -19,9 +19,10 @@ class BREADServiceProvider extends ServiceProvider
         }
 
         // Register BREAD Service
-        // $this->app->singleton('fileManager', function(){
-        //     return new \Yuyu\FileManager\Controllers\FileManagerController;
-        // });
+        $this->app->singleton('bread', function($app){
+            // dd($app);
+            return new \Yuyu\BREAD\Controllers\BREADController;
+        });
     }
 
     /**
