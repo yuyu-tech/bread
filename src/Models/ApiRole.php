@@ -1,6 +1,6 @@
 <?php
 
-namespace Yuyu\BREAD\Models;
+namespace YuyuTech\BREAD\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

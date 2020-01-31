@@ -1,8 +1,9 @@
 <?php
 
-namespace Yuyu\BREAD\Models;
+namespace YuyuTech\BREAD\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use YuyuTech\BREAD\Http\Controllers\BREADController;
 
 class Relationship extends Model
 {
@@ -18,10 +19,10 @@ class Relationship extends Model
      */
     public function attributes()
     {
-        $arrRoleIds = session('api_role_ids');
+        $arrRoleIds = BREADController::$apiRoleIds;;
         $arrRoleIds = is_array($arrRoleIds) ? $arrRoleIds : explode(',', $arrRoleIds);
         
-        return $this->hasManyThrough('Yuyu\BREAD\Models\Attribute', 'Yuyu\BREAD\Models\ApiAttribute', 'relatioship_id', 'id', 'id', 'attribute_id')
+        return $this->hasManyThrough('YuyuTech\BREAD\Models\Attribute', 'YuyuTech\BREAD\Models\ApiAttribute', 'relatioship_id', 'id', 'id', 'attribute_id')
             ->selectRaw('attributes.*, SUM(api_attributes.search) as search, SUM(api_attributes.relation_filter) as relation_filter, SUM(api_attributes.listing) as listing')
             ->join('api_role_api_attribute', 'api_role_api_attribute.api_attribute_id', '=', 'api_attributes.id')
             ->whereIn('api_role_api_attribute.api_role_id', $arrRoleIds)

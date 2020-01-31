@@ -1,6 +1,6 @@
 <?php
 
-namespace Yuyu\BREAD\Providers;
+namespace YuyuTech\BREAD\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -12,6 +12,9 @@ class BREADServiceProvider extends ServiceProvider
      * @return void
      */
     public function register(){
+        // Register Laravel passport related middleware
+        app('router')->aliasMiddleware('BREADValidator', \YuyuTech\BREAD\Http\Middleware\BREADValidator::class);
+
         // Register resources and console commands if app is running in console.
         if ($this->app->runningInConsole()) {
             $this->registerPublishableResources();
@@ -21,7 +24,7 @@ class BREADServiceProvider extends ServiceProvider
         // Register BREAD Service
         $this->app->singleton('bread', function($app){
             // dd($app);
-            return new \Yuyu\BREAD\Controllers\BREADController;
+            return new \YuyuTech\BREAD\Http\Controllers\BREADController;
         });
     }
 

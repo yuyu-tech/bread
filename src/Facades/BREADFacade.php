@@ -1,6 +1,6 @@
 <?php
 
-namespace Yuyu\BREAD\Facades;
+namespace YuyuTech\BREAD\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

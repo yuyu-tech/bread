@@ -1,5 +1,5 @@
 {
-    "name": "yuyu/bread",
+    "name": "yuyu-tech/bread",
     "description": "It's a Laravel Package to create BREAD APIs using DB configuration.",
     "type": "library",
     "require": {
@@ -8,7 +8,7 @@
     "require-dev": {
         "php": "^7.3"
     },
-    "license": "yuyu",
+    "license": "YuyuTech",
     "authors": [
         {
             "name": "Bhushan Mer",
@@ -17,17 +17,17 @@
     ],
     "autoload": {
         "psr-4": {
-            "Yuyu\\BREAD\\": "src/"
+            "YuyuTech\\BREAD\\": "src/"
         }
     },
     "minimum-stability": "dev",
     "extra": {
         "laravel": {
             "providers": [
-                "Yuyu\\BREAD\\Providers\\BREADServiceProvider"
+                "YuyuTech\\BREAD\\Providers\\BREADServiceProvider"
             ],
             "aliases": {
-                "BREAD" : "Yuyu\\BREAD\\Facades\\BREADFacade"
+                "BREAD" : "YuyuTech\\BREAD\\Facades\\BREADFacade"
             }
         }
     }

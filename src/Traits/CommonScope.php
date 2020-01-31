@@ -1,6 +1,6 @@
 <?php
 
-namespace Yuyu\BREAD\Traits;
+namespace YuyuTech\BREAD\Traits;
 
 trait CommonScope
 {
