@@ -91,7 +91,7 @@ class BREADController extends BaseController
         if(empty($this->table)){
             return abort(404, 'Table instance not found');
         }
-
+        
         // Generate Model object of associated Table.
         $this->model = (new $this->table->model);
 
